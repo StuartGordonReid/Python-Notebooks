@@ -12392,10 +12392,87 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="The-Five-Types-of-Randomness-Tests">The Five Types of Randomness Tests<a class="anchor-link" href="#The-Five-Types-of-Randomness-Tests">&#182;</a></h2>
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>For weak-form market efficiency testing there are five types of randomness tests,</p>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>Runs - the number of runs or the length of the longest (+) or (-) run</li>
+<li>Serial correlation - non-zero correlation between an asset and itself</li>
+<li>Unit roots - the presence of reversion to the trend line after shocks</li>
+<li>Variance ratios - higher or lower variances at <em>specific frequencies</em></li>
+<li>Complexity tests - non-computability or compressibility in markets</li>
+</ol>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>These are all univariate tests done to determine whether a time series of returns, $r$, is random with respect to itself, $\Phi = r$. Multivariate tests do exist but have, unfortunately, not been applied very often in the context of market efficiency testing ...</p>
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="The-Runs-Test">The Runs Test<a class="anchor-link" href="#The-Runs-Test">&#182;</a></h2>
 </div>
 </div>
-</div></section></section><section><section>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A run is a continuous sequence of either (-)'s - down days - or (+)'s - up days. In the early 1940's Abraham Wald and Jacob Wolfowitz proved that the distribution of the <em>number of runs</em> is for large sample sizes is approximately normally distributed with,</p>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>$\mu = \frac{2 N_{+} N_{-}}{N} - 1$ and</p>
+<p>$\sigma^2 = \frac{N_{+} N_{-}(2 N_{+} N_{-} - N)}{N^2 (N-1)} = \frac{(\mu - 1)(\mu - 2)}{N - 1}$</p>
+<p>where $N_{+}$ is the number of number of +'s and $N_{-}$ is the number of -'s</p>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This test if <em>nonparametric</em> meaning that you can have 90% of your day's being (+) and still test whether or not the sequence was random. This is quite a simple test which was used by Fama in his original papers on market randomness.</p>
+
+</div>
+</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -12404,7 +12481,38 @@ a.anchor-link {
 <h2 id="The-Durbin-Waton-Test">The Durbin-Waton Test<a class="anchor-link" href="#The-Durbin-Waton-Test">&#182;</a></h2>
 </div>
 </div>
-</div></section></section><section><section>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The Durbin-Watson test is named after James Durbin and Geoffrey Watson. It is a test for statistically significant levels of serial correlation in a time series. The Durbin-Watson is conducted on the residuals, $\epsilon$, from a regression analysis on the returns with itself.</p>
+<p>As such, the test does take into account drift ... but only if you assume that drift is stationary and constant. The test can be done on the residuals of a moving average,</p>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>$d = \frac{\sum^{\tau}_{t=2}(\epsilon_{t} - \epsilon_{t-1})^2}{\sum^{\tau}_{t=1} \epsilon_{t}^2}$</p>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>James Durbin and Geoffrey Watson proved that the distribution of the test statistic $d$ is <em>asymptotically</em> distributed for random walks.</p>
+
+</div>
+</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -12413,7 +12521,37 @@ a.anchor-link {
 <h2 id="The-Ljung-Box-Test">The Ljung-Box Test<a class="anchor-link" href="#The-Ljung-Box-Test">&#182;</a></h2>
 </div>
 </div>
-</div></section></section><section><section>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The Ljung-Box Test is named after Greta Ljung and George Box. The Ljung-Box test is a test of whether any autocorrelation, $\rho_i$, in a group of autocorrelations computed at lags 1 to $h$ for a time series are significantly different from zero,</p>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>$Q = \tau(\tau + 2)\sum^{h}_{k=1}\frac{\hat{\rho}^{2}_{k}}{\tau - k}$</p>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>where $\tau$ is the length of the time series and $\hat{\rho}^{2}_{k}$ is the squared autocorrelation calculated with lag equal to $k$. Greta Ljung and George Box proved that the test statistic, $Q$, is asymptotically distributed according to the Chi-Squared distribution.</p>
+
+</div>
+</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -12422,13 +12560,75 @@ a.anchor-link {
 <h2 id="The-Breusch-Godfrey-Test">The Breusch-Godfrey Test<a class="anchor-link" href="#The-Breusch-Godfrey-Test">&#182;</a></h2>
 </div>
 </div>
-</div></section></section><section><section>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The Durbin-Watson Test and the Ljung-Box Test are used very often, however some studies indicate that they are biased toward the null hypothesis. In other words, they are more likely to say that a time series is random than non-random.</p>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The Breusch-Godfrey Test was developed by Trevor S. Breusch and Leslie G. Godfrey and is considered a more powerful test for autocorrelations than either the Durbin-Watson or the Ljung-Box test. The Breusch-Godfrey test also tests for statistically significant autocorrelation in the residuals, $\epsilon$, from a regression analysis.</p>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Breusch and Godfrey proved that if you fit an auxiliary regression to the original data and the lagged residuals from a linear regression the statistic, $n R^{2}$, is asymptotically distributed according to the Chi-Squared distribution,</p>
+
+</div>
+</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="The-Bartel-Variance-Ratio-Test">The Bartel Variance Ratio Test<a class="anchor-link" href="#The-Bartel-Variance-Ratio-Test">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In 1941 John Von Neumann introduced a test of randomness based on the ratios of variances computed at different sampling intervals. The Von Neumann Ratio Test, is a very good test of randomness under the assumption of <em>normality</em>.</p>
+<p>In 1982 Robert Bartell create a nonparametric, rank-based version of the Von Neumann Ratio Test which doesn't assume that the data is normally distributed,</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>$RVN = \frac{\sum^{n-1}_{i=1}(\mathcal{R}_{i} -\mathcal{R}_{i-1})^2}{\sum^{n}_{i=1} (\mathcal{R}_{i} - (n + 1) / 2)^2}$</p>
+<p>where $\mathcal{R}_i$ is the the rank of the logarithmic return $r_{i}$ and $n$ is the length of the time series. Bartell proved that the statistic, $\frac{RVN - 2}{\sigma}$, is <em>asymptotically standard normal</em> with,</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>$\sigma^2 = \frac{4(n-2)(5n^2 - 2n - 9)}{5n(n+1)(n-1)^2}$</p>
+
 </div>
 </div>
 </div></section></section><section><section>
